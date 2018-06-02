@@ -1,6 +1,12 @@
 #!/bin/python
+import doctest
 
 def quick_sort(array):
+	"""
+	quick_sort 
+	>>> quick_sort([1,2,3,2352,2342])
+	[1, 2, 3, 2342, 2352]
+	"""
 	array_length = len(array)
 	if array_length <= 1:
 		return array
@@ -11,11 +17,4 @@ def quick_sort(array):
 	return quick_sort(lesser) + [pivot] + quick_sort(greater)
 	
 if __name__ == '__main__':
-	try:
-		raw_input
-	except NameError:  
-		raw_input  = input
-	user_input = raw_input("please enter numbers seperated by comma\n").strip()
-	unsorted = [int(item) for item in user_input.split(',')]
-	print(quick_sort(unsorted))
-		
+	doctest.testmod()

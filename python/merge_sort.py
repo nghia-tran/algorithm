@@ -1,6 +1,8 @@
+import doctest
 def merge_sort(collection):
 	"""
-
+	>>> merge_sort([12,2,2,334,3,0])
+	[0, 2, 2, 3, 12, 334]
 	"""
 	length=len(collection)
 	if length > 1: 
@@ -31,6 +33,7 @@ def merge_sort(collection):
 	return collection 
 
 if __name__ == '__main__':
+	doctest.testmod()
 	try: 
 		raw_input
 	except NameError: 
