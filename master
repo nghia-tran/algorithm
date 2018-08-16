@@ -1,0 +1,1587 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2018.08.16 17:26:36 =~=~=~=~=~=~=~=~=~=~=~=
+
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# 
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# 
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# 
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# 
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# 
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# oc get hostsubnets [4Pprojectsdescribe node ose-mstr01.f5.local[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cget node[K[1Pstatus login https://ose-mstr01.f5.local:8443 --insecure-skip-tls-verify=true[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus [K
+In project f5demo on server https://ose-mstr01.f5.local:8443
+
+You have no services, deployment configs, or build configs.
+Run 'oc new-app' to create an application.
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# oc status [9@get hostsubnet[C[C[4Pprojectsdescribe node ose-mstr01.f5.local[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cget node[K[1Pstatus get node
+NAME                  STATUS                     AGE       VERSION
+ose-mstr01.f5.local   Ready,SchedulingDisabled   54d       v1.7.6+a08f5eeb62
+ose-node01            Ready                      54d       v1.7.6+a08f5eeb62
+ose-node02            Ready                      54d       v1.7.6+a08f5eeb62
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# oc get node[1Pstatus [9@get hostsubnet[C[C[4Pprojectsdescribe node ose-mstr01.f5.local[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cget node[Kdescribe node ose-mstr01.f5.local
+Name:			ose-mstr01.f5.local
+Role:			
+Labels:			beta.kubernetes.io/arch=amd64
+			beta.kubernetes.io/os=linux
+			kubernetes.io/hostname=ose-mstr01.f5.local
+			openshift-infra=apiserver
+Annotations:		volumes.kubernetes.io/controller-managed-attach-detach=true
+Taints:			<none>
+CreationTimestamp:	Fri, 22 Jun 2018 15:53:34 -0700
+Conditions:
+  Type			Status	LastHeartbeatTime			LastTransitionTime			Reason				Message
+  ----			------	-----------------			------------------			------				-------
+  OutOfDisk 		False 	Thu, 16 Aug 2018 10:26:58 -0700 	Fri, 22 Jun 2018 15:53:34 -0700 	KubeletHasSufficientDisk 	kubelet has sufficient disk space available
+  MemoryPressure 	False 	Thu, 16 Aug 2018 10:26:58 -0700 	Fri, 22 Jun 2018 15:53:34 -0700 	KubeletHasSufficientMemory 	kubelet has sufficient memory available
+  DiskPressure 		False 	Thu, 16 Aug 2018 10:26:58 -0700 	Fri, 22 Jun 2018 15:53:34 -0700 	KubeletHasNoDiskPressure 	kubelet has no disk pressure
+  Ready 		True 	Thu, 16 Aug 2018 10:26:58 -0700 	Thu, 16 Aug 2018 04:04:54 -0700 	KubeletReady 			kubelet is posting ready status
+Addresses:
+  InternalIP:	10.10.199.100
+  Hostname:	ose-mstr01.f5.local
+Capacity:
+ cpu:		4
+ memory:	16266932Ki
+ pods:		40
+Allocatable:
+ cpu:		4
+ memory:	16164532Ki
+ pods:		40
+System Info:
+ Machine ID:			8bd4148d1a6249a7bca6e753d64862b3
+ System UUID:			564DADCC-A795-99FC-F2EA-24AFEAD600C3
+ Boot ID:			24a5cdc7-8606-46c2-9a1b-3b063c95569e
+ Kernel Version:		3.10.0-862.3.3.el7.x86_64
+ OS Image:			OpenShift Enterprise
+ Operating System:		linux
+ Architecture:			amd64
+ Container Runtime Version:	docker://1.13.1
+ Kubelet Version:		v1.7.6+a08f5eeb62
+ Kube-Proxy Version:		v1.7.6+a08f5eeb62
+ExternalID:			ose-mstr01.f5.local
+Non-terminated Pods:		(2 in total)
+  Namespace			Name					CPU Requests	CPU Limits	Memory Requests	Memory Limits
+  ---------			----					------------	----------	---------------	-------------
+  kube-service-catalog		apiserver-56t4l				0 (0%)		0 (0%)		0 (0%)		0 (0%)
+  kube-service-catalog		controller-manager-m2mbt		0 (0%)		0 (0%)		0 (0%)		0 (0%)
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  CPU Requests	CPU Limits	Memory Requests	Memory Limits
+  ------------	----------	---------------	-------------
+  0 (0%)	0 (0%)		0 (0%)		0 (0%)
+Events:		<none>
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# oc describe node ose-mstr01.f5.local[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cget node[K[1Pstatus [9@get hostsubnet[C[C[4Pprojectsdescribe node ose-mstr01.f5.local[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[21Pget projects
+NAME                                DISPLAY NAME   STATUS
+default                                            Active
+f5demo                                             Active
+guestbook                                          Active
+kube-public                                        Active
+kube-service-catalog                               Active
+kube-system                                        Active
+logging                                            Active
+management-infra                                   Active
+openshift                                          Active
+openshift-infra                                    Active
+openshift-node                                     Active
+openshift-template-service-broker                  Active
+yelb                                               Active
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# cat /etc/sysconfig/atomic-openshift-master
+OPTIONS="--loglevel=0"
+CONFIG_FILE=/etc/origin/master/master-config.yaml
+
+# Proxy configuration
+# Origin uses standard HTTP_PROXY environment variables. Be sure to set
+# NO_PROXY for your master
+#NO_PROXY=master.example.com
+#HTTP_PROXY=http://USER:PASSWORD@IPADDR:PORT
+#HTTPS_PROXY=https://USER:PASSWORD@IPADDR:PORT
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# cat /etc/sysconfig/atomic-openshift-master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /etc/sysconfig/atomic-openshift-master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /etc/sysconfig/atomic-openshift-master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /etc/sysconfig/atomic-openshift-master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cv /etc/sysconfig/atomic-openshift-master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci /etc/sysconfig/atomic-openshift-master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /etc/sysconfig/atomic-openshift-master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;49r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[49;1H"/etc/sysconfig/atomic-openshift-master" 9L, 316C[1;1HOPTIONS="--loglevel=0"
+CONFIG_FILE=/etc/origin/master/master-config.yaml
+
+# Proxy configuration
+# Origin uses standard HTTP_PROXY environment variables. Be sure to set
+# NO_PROXY for your master
+#NO_PROXY=master.example.com
+#HTTP_PROXY=http://USER:PASSWORD@IPADDR:PORT
+#HTTPS_PROXY=https://USER:PASSWORD@IPADDR:PORT
+[1m[34m~                                                                                                                                                                    [11;1H~                                                                                                                                                                    [12;1H~                                                                                                                                                                    [13;1H~                                                                                                                                                                    [14;1H~                                                                                                                                                                    [15;1H~                                                                                                                                                                    [16;1H~                                                                                                                                                                    [17;1H~                                                                                                                                                                    [18;1H~                                                                                                                                                                    [19;1H~                                                                                                                                                                    [20;1H~                                                                                                                                                                    [21;1H~                                                                                                                                                                    [22;1H~                                                                                                                                                                    [23;1H~                                                                                                                                                                    [24;1H~                                                                                                                                                                    [25;1H~                                                                                                                                                                    [26;1H~                                                                                                                                                                    [27;1H~                                                                                                                                                                    [28;1H~                                                                                                                                                                    [29;1H~                                                                                                                                                                    [30;1H~                                                                                                                                                                    [31;1H~                                                                                                                                                                    [32;1H~                                                                                                                                                                    [33;1H~                                                                                                                                                                    [34;1H~                                                                                                                                                                    [35;1H~                                                                                                                                                                    [36;1H~                                                                                                                                                                    [37;1H~                                                                                                                                                                    [38;1H~                                                                                                                                                                    [39;1H~                                                                                                                                                                    [40;1H~                                                                                                                                                                    [41;1H~                                                                                                                                                                    [42;1H~                                                                                                                                                                    [43;1H~                                                                                                                                                                    [44;1H~                                                                                                                                                                    [45;1H~                                                                                                                                                                    [46;1H~                                                                                                                                                                    [47;1H~                                                                                                                                                                    [48;1H~                                                                                                                                                                    [1;1H[?12l[?25h
+
+[2;1H[1;1H[mOPTIONS="--loglevel=[?25l[49;1H[1m-- INSERT --[m[49;13H[K[1;21H"[1;22H[K[1;21H[?12l[?25h[?25l4"[?12l[?25h[49;1H[K[1;21H[?25l[?12l[?25h[?25l[49;1H"/etc/sysconfig/atomic-openshift-master" 9L, 316C written
+[?1l>[?12l[?25h[?1049l]0;root@ose-mstr01:~[root@ose-mstr01 ~]# vi  /etc/sysconfig/atomic-openshift-master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[27Poc get projectscat /etc/sysconfig/atomic-openshift-master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksystemctl restart atomic-openshift-master
+Failed to restart atomic-openshift-master.service: Unit is masked.
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# systemctl restart atomic-openshift-master
+Failed to restart atomic-openshift-master.service: Unit is masked.
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# systemctl restart atomic-openshift-master
+Failed to restart atomic-openshift-master.service: Unit is masked.
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# 
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]#   /config/bigip.conf
+-bash: /config/bigip.conf: No such file or directory
+]0;root@ose-mstr01:~[root@ose-mstr01 ~]# cd /root/agility2018/ocp
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# 
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc create -f hs-bigip01.yaml
+hostsubnet "openshift-f5-bigip01" created
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc create -f hs-bigip02.yaml
+hostsubnet "openshift-f5-bigip02" created
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc create -f hs-bigip-float.yaml
+hostsubnet "openshift-f5-bigip-float" created
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc get hostsubnet 
+NAME                       HOST                       HOST IP         SUBNET          EGRESS IPS
+openshift-f5-bigip-float   openshift-f5-bigip-float   10.10.199.200   10.131.4.0/23   []
+openshift-f5-bigip01       openshift-f5-bigip01       10.10.199.98    10.131.0.0/23   []
+openshift-f5-bigip02       openshift-f5-bigip02       10.10.199.99    10.131.2.0/23   []
+ose-mstr01.f5.local        ose-mstr01.f5.local        10.10.199.100   10.130.0.0/23   []
+ose-node01                 ose-node01                 10.10.199.101   10.128.0.0/23   []
+ose-node02                 ose-node02                 10.10.199.102   10.129.0.0/23   []
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.98 tmsh create auth partition ocp
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.99 tmsh create auth partition ocp
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.98 tmsh create net tunnels vxlan ocp-profile flooding-type multipoint
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.99 tmsh create net tunnels vxlan ocp-profile flooding-type multipoint
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.98 tmsh create net self 10.10.199.200/24 vlan internal traffic-group traffic-group-1
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.98 tmsh run cm config-sync to-group ocp-devicegroup
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.98 tmsh create net tunnels tunnel ocp-tunnel key 0 profile ocp-profile local-address 10.10.199.200 secondary-address 10.10. 199.98 traffic-group traffic-group-1
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.99 tmsh create net tunnels tunnel ocp-tunnel key 0 profile ocp-profile local-address 10.10.199.200 secondary-address 10.10. 199.99 traffic-group traffic-group-1
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.98 tmsh create net self 10.131.0.98/14 vlan ocp-tunnel
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.99 tmsh create net self 10.131.2.99/14 vlan ocp-tunnel
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.98 tmsh create net self 10.131.4.200/14 vlan ocp-tunnel traffic-group traffic-group-1
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ssh root@10.10.200.98 tmsh run cm config-sync to-group ocp-devicegroup
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ^C
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc create serviceaccount bigip-ctlr -n kube-system
+serviceaccount "bigip-ctlr" created
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# cd /root/agility2018/ocp
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# cat f5-kctlr-openshift-clusterrole.yaml 
+# For use in OpenShift clusters
+apiVersion: v1
+kind: ClusterRole
+metadata:
+  annotations:
+    authorization.openshift.io/system-only: "true"
+  name: system:bigip-ctlr
+rules:
+- apiGroups: ["", "extensions"]
+  resources: ["nodes", "services", "endpoints", "namespaces", "ingresses", "routes" ]
+  verbs: ["get", "list", "watch"]
+- apiGroups: ["", "extensions"]
+  resources: ["configmaps", "events", "ingresses/status"]
+  verbs: ["get", "list", "watch", "update", "create", "patch" ]
+- apiGroups: ["", "extensions"]
+  resources: ["secrets"]
+  resourceNames: ["<secret-containing-bigip-login>"]
+  verbs: ["get", "list", "watch"]
+
+---
+
+apiVersion: v1
+kind: ClusterRoleBinding
+metadata:
+    name: bigip-ctlr-role
+userNames:
+- system:serviceaccount:kube-system:bigip-ctlr
+subjects:
+- kind: ServiceAccount
+  name: bigip-ctlr
+roleRef:
+  name: system:bigip-ctlr
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc create -f f5-kctlr-openshift-clusterrole.yaml
+clusterrole "system:bigip-ctlr" created
+clusterrolebinding "bigip-ctlr-role" created
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# foc [K[K[K[Koc create
+Create a resource by filename or stdin 
+
+JSON and YAML formats are accepted.
+
+Usage:
+  oc create -f FILENAME [options]
+
+Examples:
+  # Create a pod using the data in pod.json.
+  oc create -f pod.json
+  
+  # Create a pod based on the JSON passed into stdin.
+  cat pod.json | oc create -f -
+
+Available Commands:
+  clusterresourcequota Create cluster resource quota resource.
+  clusterrole          Create a ClusterRole.
+  clusterrolebinding   Create a ClusterRoleBinding for a particular ClusterRole
+  configmap            Create a configmap from a local file, directory or literal value
+  deployment           Create a deployment with the specified name.
+  deploymentconfig     Create deployment config with default options that uses a given image.
+  identity             Manually create an identity (only needed if automatic creation is disabled).
+  imagestream          Create a new empty image stream.
+  imagestreamtag       Create a new image stream tag.
+  namespace            Create a namespace with the specified name
+  poddisruptionbudget  Create a pod disruption budget with the specified name.
+  policybinding        Create a policy binding that references the policy in the targeted namespace.
+  quota                Create a quota with the specified name.
+  role                 Create a role with single rule.
+  rolebinding          Create a RoleBinding for a particular Role or ClusterRole
+  route                Expose containers externally via secured routes
+  secret               Create a secret using specified subcommand
+  service              Create a service using specified subcommand.
+  serviceaccount       Create a service account with the specified name
+  user                 Manually create a user (only needed if automatic creation is disabled).
+  useridentitymapping  Manually map an identity to a user.
+
+Options:
+      --allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in
+the template. Only applies to golang and jsonpath output formats.
+      --dry-run=false: If true, only print the object that would be sent, without sending it.
+      --edit=false: Edit the API resource before creating
+  -f, --filename=[]: Filename, directory, or URL to files to use to create the resource
+      --include-extended-apis=true: If true, include definitions of new APIs via calls to the API server. [default true]
+      --no-headers=false: When using the default or custom-column output format, don't print headers (default print
+headers).
+  -o, --output='': Output format. One of:
+json|yaml|wide|name|custom-columns=...|custom-columns-file=...|go-template=...|go-template-file=...|jsonpath=...|jsonpath-file=...
+See custom columns [http://kubernetes.io/docs/user-guide/kubectl-overview/#custom-columns], golang template
+[http://golang.org/pkg/text/template/#pkg-overview] and jsonpath template
+[http://kubernetes.io/docs/user-guide/jsonpath].
+      --record=false: Record current kubectl command in the resource annotation. If set to false, do not record the
+command. If set to true, record the command. If not set, default to updating the existing annotation value only if one
+already exists.
+  -R, --recursive=false: Process the directory used in -f, --filename recursively. Useful when you want to manage
+related manifests organized within the same directory.
+      --save-config=false: If true, the configuration of current object will be saved in its annotation. Otherwise, the
+annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future.
+      --schema-cache-dir='~/.kube/schema': If non-empty, load/store cached API schemas in this directory, default is
+'$HOME/.kube/schema'
+  -l, --selector='': Selector (label query) to filter on, supports '=', '==', and '!='.
+  -a, --show-all=true: When printing, show all resources (false means hide terminated pods.)
+      --show-labels=false: When printing, show all labels as the last column (default hide labels column)
+      --sort-by='': If non-empty, sort list types using this field specification.  The field specification is expressed
+as a JSONPath expression (e.g. '{.metadata.name}'). The field in the API resource specified by this JSONPath expression
+must be an integer or a string.
+      --template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The
+template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
+      --validate=false: If true, use a schema to validate the input before sending it
+      --windows-line-endings=false: Only relevant if --edit=true. Use Windows line-endings (default Unix line-endings)
+
+Use "oc <command> --help" for more information about a given command.
+Use "oc options" for a list of global command-line options (applies to all commands).
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc create -f  bigip01-cc.yaml
+deployment "bigip01-ctlr" created
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc create -f  bigip02-cc.yaml
+deployment "bigip02-ctlr" created
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# cat bigip01-cc.yaml 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: bigip01-ctlr
+  namespace: kube-system
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: k8s-bigip-ctlr1
+      labels:
+        app: k8s-bigip-ctlr1
+    spec:
+      serviceAccountName: bigip-ctlr
+      containers:
+        - name: k8s-bigip-ctlr
+          image: "f5networks/k8s-bigip-ctlr:latest"
+          command: ["/app/bin/k8s-bigip-ctlr"]
+          args: [
+            "--credentials-directory=/tmp/creds",
+            "--bigip-url=10.10.200.98",
+            "--bigip-partition=ocp",
+            "--pool-member-type=cluster",
+            "--manage-routes=true",
+            "--node-poll-interval=5",
+            "--verify-interval=5",
+            "--namespace=demoproj",
+            "--namespace=yelb",
+            "--namespace=guestbook",
+            "--namespace=f5demo",
+            "--route-vserver-addr=10.10.201.120",
+            "--route-http-vserver=ocp-vserver",
+            "--route-https-vserver=ocp-https-vserver",
+            "--openshift-sdn-name=/Common/ocp-tunnel"
+          ]
+          volumeMounts:
+          - name: bigip-creds
+            mountPath: "/tmp/creds"
+            readOnly: true
+      volumes:
+      - name: bigip-creds
+        secret:
+          secretName: bigip-login
+      imagePullSecrets:
+        - name: f5-docker-images
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# cat bigip01-cc.yaml [1P[1@2
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: bigip02-ctlr
+  namespace: kube-system
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: k8s-bigip-ctlr1
+      labels:
+        app: k8s-bigip-ctlr1
+    spec:
+      serviceAccountName: bigip-ctlr
+      containers:
+        - name: k8s-bigip-ctlr
+          image: "f5networks/k8s-bigip-ctlr:latest"
+          command: ["/app/bin/k8s-bigip-ctlr"]
+          args: [
+            "--credentials-directory=/tmp/creds",
+            "--bigip-url=10.10.200.99",
+            "--bigip-partition=ocp",
+            "--pool-member-type=cluster",
+            "--manage-routes=true",
+            "--node-poll-interval=5",
+            "--verify-interval=5",
+            "--namespace=demoproj",
+            "--namespace=yelb",
+            "--namespace=guestbook",
+            "--namespace=f5demo",
+            "--route-vserver-addr=10.10.201.120",
+            "--route-http-vserver=ocp-vserver",
+            "--route-https-vserver=ocp-https-vserver",
+            "--openshift-sdn-name=/Common/ocp-tunnel"
+          ]
+          volumeMounts:
+          - name: bigip-creds
+            mountPath: "/tmp/creds"
+            readOnly: true
+      volumes:
+      - name: bigip-creds
+        secret:
+          secretName: bigip-login
+      imagePullSecrets:
+        - name: f5-docker-images
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc get deployment -n kube-system
+NAME           DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+bigip01-ctlr   1         1         1            1           1m
+bigip02-ctlr   1         1         1            1           1m
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc get deployment bigip01-ctlr -n kube-system
+NAME           DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+bigip01-ctlr   1         1         1            1           1m
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc get pods -n kube-system
+NAME                            READY     STATUS    RESTARTS   AGE
+bigip01-ctlr-1625337978-mtvh7   1/1       Running   0          1m
+bigip02-ctlr-2628209173-kq2hz   1/1       Running   0          1m
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# [K[root@ose-mstr01 ocp]# 
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# [K[root@ose-mstr01 ocp]# cd roo[K[K[K/root/agility2018/apps/demo[K[K[K[Kf5demo/
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# ls
+f5demo.yaml  f5service.yaml
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# oc create -f f5demo.yaml 
+deployment "f5demo" created
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# oc create -f f5demo.yaml [K[K[K[K[K[K[K[K[K[Kservice.yaml 
+service "f5demo" created
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# cat fe[K5demo.yaml 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: f5demo
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: f5demo
+        tier: frontend
+    spec:
+      containers:
+      - name: f5demo
+        image: kmunson1973/f5demo:1.0.0
+        ports:
+        - containerPort: 8080
+
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# cat f5service.yaml 
+apiVersion: v1
+kind: Service
+metadata:
+  name: f5demo
+  labels:
+    app: f5demo
+    tier: frontend
+spec:
+  # if your cluster supports it, uncomment the following to automatically create
+  # an external load-balanced IP for the frontend service.
+  # type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: f5demo
+    tier: frontend
+
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# oc get deployment f5demo -n f5demo
+NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+f5demo    3         3         3            3           41s
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# oc create -f pool-only.yaml
+error: the path "pool-only.yaml" does not exist
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# cd ..
+]0;root@ose-mstr01:~/agility2018/apps[root@ose-mstr01 apps]# ls
+[0m[01;34mf5demo[0m  [01;34mguestbook[0m  [01;34mmodule3[0m  [01;34myelb-app[0m
+]0;root@ose-mstr01:~/agility2018/apps[root@ose-mstr01 apps]# cd ..
+]0;root@ose-mstr01:~/agility2018[root@ose-mstr01 agility2018]# ls
+[0m[01;34mapps[0m  [01;34mbigip[0m  [01;34mocp[0m
+]0;root@ose-mstr01:~/agility2018[root@ose-mstr01 agility2018]# cd [K[K[Kcd apps/
+]0;root@ose-mstr01:~/agility2018/apps[root@ose-mstr01 apps]# ls
+[0m[01;34mf5demo[0m  [01;34mguestbook[0m  [01;34mmodule3[0m  [01;34myelb-app[0m
+]0;root@ose-mstr01:~/agility2018/apps[root@ose-mstr01 apps]# cd /root/agility2018/ocp
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# 
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc create -f pool-only.yaml
+configmap "k8s.poolonly" created
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# cat pool-only.yaml 
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  # name of the resource to create on the BIG-IP
+  name: k8s.poolonly
+  # the namespace to create the object in
+  # As of v1.1, the k8s-bigip-ctlr watches all namespaces by default
+  # If the k8s-bigip-ctlr is watching a specific namespace(s),
+  # this setting must match the namespace of the Service you want to proxy
+  # -AND- the namespace(s) the k8s-bigip-ctlr watches
+  namespace: f5demo
+  labels:
+    # the type of resource you want to create on the BIG-IP
+    f5type: virtual-server
+data:
+  schema: "f5schemadb://bigip-virtual-server_v0.1.7.json"
+  data: |
+    {
+      "virtualServer": {
+        "backend": {
+          "servicePort": 8080,
+          "serviceName": "f5demo",
+          "healthMonitors": [{
+            "interval": 3,
+            "protocol": "http",
+            "send": "GET /\r\n",
+            "timeout": 10
+          }]
+        },
+        "frontend": {
+          "virtualAddress": {
+            "port": 80
+          },
+          "partition": "ocp",
+          "balance": "round-robin",
+          "mode": "http"
+        }
+      }
+    }
+
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc scale --replicas=10 deployment/f5demo -n f5demo
+deployment "f5demo" scaled
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# 
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# 
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc get deployment f5demo -n f5demo
+NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+f5demo    10        10        10           3           3m
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc get deployment f5demo -n f5demo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Koc scale --replicas=10 deployment/f5demo -n f5demo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Koc get deployment f5demo -n f5demo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# 
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# 
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# 
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# cd ..
+]0;root@ose-mstr01:~/agility2018[root@ose-mstr01 agility2018]# ls
+[0m[01;34mapps[0m  [01;34mbigip[0m  [01;34mocp[0m
+]0;root@ose-mstr01:~/agility2018[root@ose-mstr01 agility2018]# cd op[Kcp/
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# cd ..
+]0;root@ose-mstr01:~/agility2018[root@ose-mstr01 agility2018]# ls
+[0m[01;34mapps[0m  [01;34mbigip[0m  [01;34mocp[0m
+]0;root@ose-mstr01:~/agility2018[root@ose-mstr01 agility2018]# cd apps/
+f5demo/    guestbook/ module3/   yelb-app/  
+[root@ose-mstr01 agility2018]# cd apps/
+f5demo/    guestbook/ module3/   yelb-app/  
+[root@ose-mstr01 agility2018]# cd apps/f5demo/
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# ls
+f5demo.yaml  f5service.yaml
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# [4P(reverse-i-search)`':[Cf': cd apps/f5demo/[1@5[C[C[C[C[C[C[C[C[C[C[C[1@d[C[C[C[C[C[C[C[C[C[C[C[1@e[C[C[C[C[C[C[C[C[C[C[C[1@m[C[C[C[C[C[C[C[C[C[C[C[1@o[C[C[C[C[C[C[C[C[C[C[C.': cat f5demo.yaml [1@y[C[C[C[C[C[C[C[1@a[C[C[C[C[C[C[C[9@oc create -f[C[C[C[C[C[C[C[C[C[C[C[C[C-f f5service.yaml [5P[root@ose-mstr01 f5demo]#[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+Error from server (AlreadyExists): error when creating "f5demo.yaml": deployments.extensions "f5demo" already exists
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# cat f5demo.yaml 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: f5demo
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: f5demo
+        tier: frontend
+    spec:
+      containers:
+      - name: f5demo
+        image: kmunson1973/f5demo:1.0.0
+        ports:
+        - containerPort: 8080
+
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# cat f5demo.yaml [1P[1P[1P[12@oc create -f f5demo[C[C[C[C[C[Cls[K[K[Koc[K[K;s[K[Kls
+f5demo.yaml  f5service.yaml
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# cd ..
+]0;root@ose-mstr01:~/agility2018/apps[root@ose-mstr01 apps]# ls
+[0m[01;34mf5demo[0m  [01;34mguestbook[0m  [01;34mmodule3[0m  [01;34myelb-app[0m
+]0;root@ose-mstr01:~/agility2018/apps[root@ose-mstr01 apps]# cd oc
+-bash: cd: oc: No such file or directory
+]0;root@ose-mstr01:~/agility2018/apps[root@ose-mstr01 apps]# ls
+[0m[01;34mf5demo[0m  [01;34mguestbook[0m  [01;34mmodule3[0m  [01;34myelb-app[0m
+]0;root@ose-mstr01:~/agility2018/apps[root@ose-mstr01 apps]# cd f5demo/
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# ls
+f5demo.yaml  f5service.yaml
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# cat fr[K5demo.yaml 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: f5demo
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: f5demo
+        tier: frontend
+    spec:
+      containers:
+      - name: f5demo
+        image: kmunson1973/f5demo:1.0.0
+        ports:
+        - containerPort: 8080
+
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# 
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# 
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# 
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# ls
+f5demo.yaml  f5service.yaml
+]0;root@ose-mstr01:~/agility2018/apps/f5demo[root@ose-mstr01 f5demo]# cd ..
+]0;root@ose-mstr01:~/agility2018/apps[root@ose-mstr01 apps]# ls
+[0m[01;34mf5demo[0m  [01;34mguestbook[0m  [01;34mmodule3[0m  [01;34myelb-app[0m
+]0;root@ose-mstr01:~/agility2018/apps[root@ose-mstr01 apps]# cd ..[K.
+]0;root@ose-mstr01:~/agility2018[root@ose-mstr01 agility2018]# ls
+[0m[01;34mapps[0m  [01;34mbigip[0m  [01;34mocp[0m
+]0;root@ose-mstr01:~/agility2018[root@ose-mstr01 agility2018]# cd ..[K[Kocp/
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# vi pool-only.yaml 
+[?1049h[?1h=[1;49r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[49;1H"pool-only.yaml" 40L, 1100C[1;1Hkind: ConfigMap
+apiVersion: v1
+metadata:
+  # name of the resource to create on the BIG-IP
+  name: k8s.poolonly
+  # the namespace to create the object in
+  # As of v1.1, the k8s-bigip-ctlr watches all namespaces by default
+  # If the k8s-bigip-ctlr is watching a specific namespace(s),
+  # this setting must match the namespace of the Service you want to proxy
+  # -AND- the namespace(s) the k8s-bigip-ctlr watches
+  namespace: f5demo
+  labels:
+    # the type of resource you want to create on the BIG-IP
+    f5type: virtual-server
+data:
+  schema: "f5schemadb://bigip-virtual-server_v0.1.7.json"
+  data: |
+    {[19;7H"virtualServer": {[20;9H"backend": {[21;11H"servicePort": 8080,[22;11H"serviceName": "f5demo",[23;11H"healthMonitors": [{[24;13H"interval": 3,[25;13H"protocol": "http",[26;13H"send": "GET /\r\n",[27;13H"timeout": 10[28;11H}][29;9H},[30;9H"frontend": {[31;11H"virtualAddress": {[32;13H"port": 80[33;11H},[34;11H"partition": "ocp",[35;11H"balance": "round-robin",[36;11H"mode": "http"[37;9H}[38;7H}
+    }
+
+[1m[34m~                                                                                                                                                                    [42;1H~                                                                                                                                                                    [43;1H~                                                                                                                                                                    [44;1H~                                                                                                                                                                    [45;1H~                                                                                                                                                                    [46;1H~                                                                                                                                                                    [47;1H~                                                                                                                                                                    [48;1H~                                                                                                                                                                    [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[39;1H[38;1H[37;1H[36;1H[35;1H[34;1H[33;1H[32;1H[?25l[m[49;1H[1m-- INSERT --[m[49;13H[K[33;48r[33;1H[L[1;49r[33;1H[?12l[?25h[?25l[34;48r[34;1H[L[1;49r[33;8H"bindAddr": "10.10.201.220"
+[?12l[?25h[33;1H[?25li       "bindAddr": "10.10.201.220"i[?12l[?25h[?25l       "bindAddr": "10.10.201.220"[33;35H[K[33;1H[?12l[?25h[?25l[32;48r[48;1H
+[1;49r[32;8H     "port": 80       "bindAddr": "10.10.201.220"[48;1H[1m[34m~                                                                                                                                                                    [32;23H[?12l[?25h[?25l[33;48r[m[33;1H[L[1;49r[32;30H[K[33;8H"bindAddr": "10.10.201.220"[?12l[?25h[?25l[7C "bindAddr": "10.10.201.220" [?12l[?25h[?25l[7C "bindAddr": "10.10.201.220"  [?12l[?25h[?25l[7C "bindAddr": "10.10.201.220"   [?12l[?25h[?25l[7C "bindAddr": "10.10.201.220"    [?12l[?25h[?25l[7C "bindAddr": "10.10.201.220"     [?12l[?25h       "[?25lbindAddr": "10.10.201.220"[33;39H[K[33;13H[?12l[?25h[?25l"bindAddr": "10.10.201.220"[33;14H[?12l[?25h
+[?25ld[?12l[?25h[?25ld[?12l[?25h[49;1H[K[34;2H[?25l[?12l[?25h[?25l[34;48r[48;1H
+[1;49r[48;1H[1m[34m~                                                                                                                                                                    [34;11H[?12l[?25h[?25l[m[49;1H"pool-only.yaml" 41L, 1140C written
+[?1l>[?12l[?25h[?1049l]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc delete -f pool-only.yaml
+configmap "k8s.poolonly" deleted
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc delete -f pool-only.yaml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pvi pool-only.yaml oc delete -f pool-only.yaml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Koc create -f pool-only.yaml 
+configmap "k8s.poolonly" created
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc create -f pool-only.yaml [1Pdelete -f pool-only.yaml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pvi pool-only.yaml ls[Kcd ocp/ls[Kcd ..[3Plscd ..[3Plscat f5demo.yaml ls[Kcd f5demo/ls[K
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc get po -n kube-syste
+No resources found.
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc get po -n kube-system
+NAME                            READY     STATUS    RESTARTS   AGE
+bigip01-ctlr-1625337978-mtvh7   1/1       Running   0          21m
+bigip02-ctlr-2628209173-kq2hz   1/1       Running   0          21m
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc logs -f bigip01-ctlr-1625337978-mtvh7
+Error from server (NotFound): pods "bigip01-ctlr-1625337978-mtvh7" not found
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc logs -f bigip01-ctlr-1625337978-mtvh7 -n kubes[K-system
+2018/08/16 17:52:52 [INFO] Starting: Version: v1.6.0, BuildInfo: n1156-409084177
+2018/08/16 17:52:52 [INFO] ConfigWriter started: 0xc42023f110
+2018/08/16 17:52:52 [INFO] Started config driver sub-process at pid: 21
+2018/08/16 17:52:52 [INFO] NodePoller (0xc4203142d0) registering new listener: 0x407ce0
+2018/08/16 17:52:52 [INFO] NodePoller (0xc4203142d0) registering new listener: 0x407d50
+2018/08/16 17:52:53 [INFO] NodePoller started: (0xc4203142d0)
+2018/08/16 17:52:53 [INFO] Registered BigIP Metrics
+2018/08/16 17:52:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:52:56 [INFO] [2018-08-16 17:52:56,075 __main__ INFO] entering inotify loop to watch /tmp/k8s-bigip-ctlr.config522951784/config.json
+2018/08/16 17:53:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:53:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:54:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:54:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:55:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:55:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:56:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:56:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:57:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:57:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:58:14 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 17:58:18 [INFO] [2018-08-16 17:58:18,224 f5_cccl.resource.resource INFO] Updating ApiFDBTunnel: /Common/ocp-tunnel
+2018/08/16 17:58:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:58:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:59:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:59:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:00:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:00:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:00:59 [INFO] No virtual IP was specified for the virtual server f5demo_k8s.poolonly creating pool only.
+2018/08/16 18:00:59 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:00:59 [INFO] [2018-08-16 18:00:59,972 f5_cccl.resource.resource INFO] Creating ApiHTTPMonitor: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo_0_http
+2018/08/16 18:01:00 [INFO] [2018-08-16 18:01:00,201 f5_cccl.resource.resource INFO] Creating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+E0816 18:01:16.391212      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:01:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:01:40 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:40 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:40 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:40 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:41 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:41 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:42 [INFO] [2018-08-16 18:01:42,431 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:01:44 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:44 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:44 [INFO] [2018-08-16 18:01:44,967 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:01:45 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:45 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:48 [INFO] [2018-08-16 18:01:48,059 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:01:48 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:48 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:52 [INFO] [2018-08-16 18:01:52,068 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:01:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:01:54 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:54 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:55 [INFO] [2018-08-16 18:01:55,437 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:01:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:02:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:02:35.262630      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:02:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:03:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:03:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:04:12.272693      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:04:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:04:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:05:21.393160      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:05:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:05:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:06:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:06:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:07:25 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:25 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:25 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:25 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:26 [INFO] [2018-08-16 18:07:26,609 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:27 [INFO] [2018-08-16 18:07:27,468 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.60%0
+2018/08/16 18:07:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:07:28 [INFO] [2018-08-16 18:07:28,493 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:29 [INFO] [2018-08-16 18:07:29,462 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.59%0
+2018/08/16 18:07:40 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:40 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:41 [INFO] [2018-08-16 18:07:41,821 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:42 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:42 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:44 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:44 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:44 [INFO] [2018-08-16 18:07:44,925 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:45 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:45 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:46 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:46 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:47 [INFO] [2018-08-16 18:07:47,980 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:49 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:49 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:51 [INFO] [2018-08-16 18:07:51,520 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:52 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:52 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:53 [INFO] [2018-08-16 18:07:53,821 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:08:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:08:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:09:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:09:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:10:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:10:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:11:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:11:32.365718      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:11:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:12:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:12:30 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:12:30 [INFO] [2018-08-16 18:12:30,490 f5_cccl.resource.resource INFO] Deleting IcrPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:12:30 [INFO] [2018-08-16 18:12:30,691 f5_cccl.resource.resource INFO] Deleting IcrHTTPMonitor: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo_0_http
+2018/08/16 18:12:31 [INFO] [2018-08-16 18:12:31,359 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.59%0
+2018/08/16 18:12:31 [INFO] [2018-08-16 18:12:31,470 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.61%0
+2018/08/16 18:12:31 [INFO] [2018-08-16 18:12:31,620 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.57%0
+2018/08/16 18:12:31 [INFO] [2018-08-16 18:12:31,767 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.63%0
+2018/08/16 18:12:31 [INFO] [2018-08-16 18:12:31,905 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.56%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,068 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.64%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,255 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.58%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,418 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.61%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,545 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.57%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,696 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.56%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,865 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.62%0
+2018/08/16 18:12:33 [INFO] [2018-08-16 18:12:33,010 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.58%0
+2018/08/16 18:12:33 [INFO] [2018-08-16 18:12:33,160 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.60%0
+2018/08/16 18:12:33 [INFO] [2018-08-16 18:12:33,308 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.63%0
+2018/08/16 18:12:33 [INFO] [2018-08-16 18:12:33,470 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.62%0
+2018/08/16 18:12:40 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:12:53 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:12:53 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:12:53 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:12:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:13:23 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:13:23 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:13:23 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:13:23 [ERROR] [2018-08-16 18:13:23,740 __main__ ERROR] Unexpected error
+2018/08/16 18:13:23 [INFO] Traceback (most recent call last):
+2018/08/16 18:13:23 [INFO]   File "/app/src/f5-ctlr-agent/f5_ctlr_agent/bigipconfigdriver.py", line 323, in _do_reset
+2018/08/16 18:13:23 [INFO]     incomplete = self._update_cccl(config)
+2018/08/16 18:13:23 [INFO]   File "/app/src/f5-ctlr-agent/f5_ctlr_agent/bigipconfigdriver.py", line 397, in _update_cccl
+2018/08/16 18:13:23 [INFO]     incomplete += mgr._apply_ltm_config(cfg_ltm)
+2018/08/16 18:13:23 [INFO]   File "/app/src/f5-ctlr-agent/f5_ctlr_agent/bigipconfigdriver.py", line 117, in _apply_ltm_config
+2018/08/16 18:13:23 [INFO]     return self._cccl.apply_ltm_config(config)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/f5_cccl/api.py", line 92, in apply_ltm_config
+2018/08/16 18:13:23 [INFO]     self._user_agent)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/f5_cccl/service/manager.py", line 662, in apply_ltm_config
+2018/08/16 18:13:23 [INFO]     default_route_domain = self._bigip.get_default_route_domain()
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/f5_cccl/bigip.py", line 433, in get_default_route_domain
+2018/08/16 18:13:23 [INFO]     name=self._partition)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/f5/bigip/resource.py", line 1054, in load
+2018/08/16 18:13:23 [INFO]     return self._load(**kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/f5/bigip/resource.py", line 1033, in _load
+2018/08/16 18:13:23 [INFO]     response = refresh_session.get(base_uri, **kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/icontrol/session.py", line 257, in wrapper
+2018/08/16 18:13:23 [INFO]     response = method(self, REST_uri, **kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/icontrol/session.py", line 462, in get
+2018/08/16 18:13:23 [INFO]     return self.session.get(uri, **kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/requests/sessions.py", line 480, in get
+2018/08/16 18:13:23 [INFO]     return self.request('GET', url, **kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/requests/sessions.py", line 468, in request
+2018/08/16 18:13:23 [INFO]     resp = self.send(prep, **send_kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/requests/sessions.py", line 576, in send
+2018/08/16 18:13:23 [INFO]     r = adapter.send(request, **kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/requests/adapters.py", line 426, in send
+2018/08/16 18:13:23 [INFO]     raise ConnectionError(err, request=request)
+2018/08/16 18:13:23 [INFO] ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+2018/08/16 18:13:23 [ERROR] [2018-08-16 18:13:23,763 __main__ ERROR] Error applying config, will try again in 1 seconds
+2018/08/16 18:13:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:13:37.379193      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:13:53 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:13:53 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:13:53 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:13:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:14:23 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:14:23 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:14:23 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:14:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+^C
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# vi pool-only.yaml 
+[?1049h[?1h=[1;49r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[49;1H"pool-only.yaml" 41L, 1140C[1;1Hkind: ConfigMap
+apiVersion: v1
+metadata:
+  # name of the resource to create on the BIG-IP
+  name: k8s.poolonly
+  # the namespace to create the object in
+  # As of v1.1, the k8s-bigip-ctlr watches all namespaces by default
+  # If the k8s-bigip-ctlr is watching a specific namespace(s),
+  # this setting must match the namespace of the Service you want to proxy
+  # -AND- the namespace(s) the k8s-bigip-ctlr watches
+  namespace: f5demo
+  labels:
+    # the type of resource you want to create on the BIG-IP
+    f5type: virtual-server
+data:
+  schema: "f5schemadb://bigip-virtual-server_v0.1.7.json"
+  data: |
+    {[19;7H"virtualServer": {[20;9H"backend": {[21;11H"servicePort": 8080,[22;11H"serviceName": "f5demo",[23;11H"healthMonitors": [{[24;13H"interval": 3,[25;13H"protocol": "http",[26;13H"send": "GET /\r\n",[27;13H"timeout": 10[28;11H}][29;9H},[30;9H"frontend": {[31;11H"virtualAddress": {[32;13H"port": 80[33;13H"bindAddr": "10.10.201.220"[34;11H},[35;11H"partition": "ocp",[36;11H"balance": "round-robin",[37;11H"mode": "http"[38;9H}[39;7H}
+    }
+
+[1m[34m~                                                                                                                                                                    [43;1H~                                                                                                                                                                    [44;1H~                                                                                                                                                                    [45;1H~                                                                                                                                                                    [46;1H~                                                                                                                                                                    [47;1H~                                                                                                                                                                    [48;1H~                                                                                                                                                                    [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[m            "port": 8[?25l[49;1H[1m-- INSERT --[m[49;13H[K[32;23H[?12l[?25h[?25l,[?12l[?25h[49;1H[K[32;23H[?25l[?12l[?25h[?25l[49;1H:[?12l[?25hwq[?25l"pool-only.yaml" 41L, 1141C written
+[?1l>[?12l[?25h[?1049l]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# vi pool-only.yaml [1P[1P[1@o[1@c[C[1@ [1@d[1@l[1@e[1P[1P[1@e[1@l[1@e[1@t[1@e[C[1@ [1@-[1@f[C[1@ 
+configmap "k8s.poolonly" deleted
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# oc delete -f  pool-only.yaml [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6P[1@c[1@r[1@e[1@a[1@t[1@e
+configmap "k8s.poolonly" created
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# [1P(reverse-i-search)`':[C[30@l': oc create -f  pool-only.yaml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co': oc logs -f bigip01-ctlr-1625337978-mtvh7 -n kube-system[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@g[C[C[C[C[C[C[1@s[C[C[C[C[C[C[3P[root@ose-mstr01 ocp]#[C[C[C[C
+2018/08/16 17:52:52 [INFO] Starting: Version: v1.6.0, BuildInfo: n1156-409084177
+2018/08/16 17:52:52 [INFO] ConfigWriter started: 0xc42023f110
+2018/08/16 17:52:52 [INFO] Started config driver sub-process at pid: 21
+2018/08/16 17:52:52 [INFO] NodePoller (0xc4203142d0) registering new listener: 0x407ce0
+2018/08/16 17:52:52 [INFO] NodePoller (0xc4203142d0) registering new listener: 0x407d50
+2018/08/16 17:52:53 [INFO] NodePoller started: (0xc4203142d0)
+2018/08/16 17:52:53 [INFO] Registered BigIP Metrics
+2018/08/16 17:52:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:52:56 [INFO] [2018-08-16 17:52:56,075 __main__ INFO] entering inotify loop to watch /tmp/k8s-bigip-ctlr.config522951784/config.json
+2018/08/16 17:53:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:53:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:54:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:54:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:55:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:55:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:56:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:56:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:57:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:57:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:58:14 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 17:58:18 [INFO] [2018-08-16 17:58:18,224 f5_cccl.resource.resource INFO] Updating ApiFDBTunnel: /Common/ocp-tunnel
+2018/08/16 17:58:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:58:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:59:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 17:59:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:00:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:00:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:00:59 [INFO] No virtual IP was specified for the virtual server f5demo_k8s.poolonly creating pool only.
+2018/08/16 18:00:59 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:00:59 [INFO] [2018-08-16 18:00:59,972 f5_cccl.resource.resource INFO] Creating ApiHTTPMonitor: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo_0_http
+2018/08/16 18:01:00 [INFO] [2018-08-16 18:01:00,201 f5_cccl.resource.resource INFO] Creating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+E0816 18:01:16.391212      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:01:23 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:01:40 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:40 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:40 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:40 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:41 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:41 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:42 [INFO] [2018-08-16 18:01:42,431 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:01:44 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:44 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:44 [INFO] [2018-08-16 18:01:44,967 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:01:45 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:45 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:48 [INFO] [2018-08-16 18:01:48,059 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:01:48 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:48 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:52 [INFO] [2018-08-16 18:01:52,068 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:01:53 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:01:54 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:01:54 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:01:55 [INFO] [2018-08-16 18:01:55,437 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:01:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:02:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:02:35.262630      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:02:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:03:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:03:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:04:12.272693      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:04:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:04:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:05:21.393160      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:05:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:05:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:06:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:06:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:07:25 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:25 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:25 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:25 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:26 [INFO] [2018-08-16 18:07:26,609 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:27 [INFO] [2018-08-16 18:07:27,468 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.60%0
+2018/08/16 18:07:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:07:28 [INFO] [2018-08-16 18:07:28,493 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:29 [INFO] [2018-08-16 18:07:29,462 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.59%0
+2018/08/16 18:07:40 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:40 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:41 [INFO] [2018-08-16 18:07:41,821 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:42 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:42 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:44 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:44 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:44 [INFO] [2018-08-16 18:07:44,925 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:45 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:45 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:46 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:46 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:47 [INFO] [2018-08-16 18:07:47,980 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:49 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:49 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:51 [INFO] [2018-08-16 18:07:51,520 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:52 [WARNING] Overwriting existing entry for backend {ServiceName:f5demo ServicePort:8080 Namespace:f5demo}
+2018/08/16 18:07:52 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:07:53 [INFO] [2018-08-16 18:07:53,821 f5_cccl.resource.resource INFO] Updating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:07:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:08:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:08:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:09:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:09:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:10:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:10:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:11:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:11:32.365718      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:11:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:12:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:12:30 [INFO] Wrote 0 Virtual Server and 0 IApp configs
+2018/08/16 18:12:30 [INFO] [2018-08-16 18:12:30,490 f5_cccl.resource.resource INFO] Deleting IcrPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:12:30 [INFO] [2018-08-16 18:12:30,691 f5_cccl.resource.resource INFO] Deleting IcrHTTPMonitor: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo_0_http
+2018/08/16 18:12:31 [INFO] [2018-08-16 18:12:31,359 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.59%0
+2018/08/16 18:12:31 [INFO] [2018-08-16 18:12:31,470 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.61%0
+2018/08/16 18:12:31 [INFO] [2018-08-16 18:12:31,620 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.57%0
+2018/08/16 18:12:31 [INFO] [2018-08-16 18:12:31,767 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.63%0
+2018/08/16 18:12:31 [INFO] [2018-08-16 18:12:31,905 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.56%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,068 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.64%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,255 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.58%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,418 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.61%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,545 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.57%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,696 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.56%0
+2018/08/16 18:12:32 [INFO] [2018-08-16 18:12:32,865 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.62%0
+2018/08/16 18:12:33 [INFO] [2018-08-16 18:12:33,010 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.58%0
+2018/08/16 18:12:33 [INFO] [2018-08-16 18:12:33,160 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.60%0
+2018/08/16 18:12:33 [INFO] [2018-08-16 18:12:33,308 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.129.0.63%0
+2018/08/16 18:12:33 [INFO] [2018-08-16 18:12:33,470 f5_cccl.resource.resource INFO] Deleting IcrNode: /ocp/10.128.0.62%0
+2018/08/16 18:12:40 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:12:53 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:12:53 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:12:53 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:12:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:13:23 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:13:23 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:13:23 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:13:23 [ERROR] [2018-08-16 18:13:23,740 __main__ ERROR] Unexpected error
+2018/08/16 18:13:23 [INFO] Traceback (most recent call last):
+2018/08/16 18:13:23 [INFO]   File "/app/src/f5-ctlr-agent/f5_ctlr_agent/bigipconfigdriver.py", line 323, in _do_reset
+2018/08/16 18:13:23 [INFO]     incomplete = self._update_cccl(config)
+2018/08/16 18:13:23 [INFO]   File "/app/src/f5-ctlr-agent/f5_ctlr_agent/bigipconfigdriver.py", line 397, in _update_cccl
+2018/08/16 18:13:23 [INFO]     incomplete += mgr._apply_ltm_config(cfg_ltm)
+2018/08/16 18:13:23 [INFO]   File "/app/src/f5-ctlr-agent/f5_ctlr_agent/bigipconfigdriver.py", line 117, in _apply_ltm_config
+2018/08/16 18:13:23 [INFO]     return self._cccl.apply_ltm_config(config)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/f5_cccl/api.py", line 92, in apply_ltm_config
+2018/08/16 18:13:23 [INFO]     self._user_agent)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/f5_cccl/service/manager.py", line 662, in apply_ltm_config
+2018/08/16 18:13:23 [INFO]     default_route_domain = self._bigip.get_default_route_domain()
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/f5_cccl/bigip.py", line 433, in get_default_route_domain
+2018/08/16 18:13:23 [INFO]     name=self._partition)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/f5/bigip/resource.py", line 1054, in load
+2018/08/16 18:13:23 [INFO]     return self._load(**kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/f5/bigip/resource.py", line 1033, in _load
+2018/08/16 18:13:23 [INFO]     response = refresh_session.get(base_uri, **kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/icontrol/session.py", line 257, in wrapper
+2018/08/16 18:13:23 [INFO]     response = method(self, REST_uri, **kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/icontrol/session.py", line 462, in get
+2018/08/16 18:13:23 [INFO]     return self.session.get(uri, **kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/requests/sessions.py", line 480, in get
+2018/08/16 18:13:23 [INFO]     return self.request('GET', url, **kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/requests/sessions.py", line 468, in request
+2018/08/16 18:13:23 [INFO]     resp = self.send(prep, **send_kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/requests/sessions.py", line 576, in send
+2018/08/16 18:13:23 [INFO]     r = adapter.send(request, **kwargs)
+2018/08/16 18:13:23 [INFO]   File "/usr/local/lib/python2.7/site-packages/requests/adapters.py", line 426, in send
+2018/08/16 18:13:23 [INFO]     raise ConnectionError(err, request=request)
+2018/08/16 18:13:23 [INFO] ConnectionError: ('Connection aborted.', BadStatusLine("''",))
+2018/08/16 18:13:23 [ERROR] [2018-08-16 18:13:23,763 __main__ ERROR] Error applying config, will try again in 1 seconds
+2018/08/16 18:13:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:13:37.379193      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:13:53 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:13:53 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:13:53 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:13:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:14:23 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:14:23 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:14:23 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:14:28 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+E0816 18:14:50.442162      11 streamwatcher.go:109] Unable to decode an event from the watch stream: unable to decode watch event: no kind "Status" is registered for version "v1"
+2018/08/16 18:14:53 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:14:53 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:14:53 [ERROR] Error parsing ConfigMap f5demo_k8s.poolonly
+2018/08/16 18:14:57 [WARNING] Could not get config for ConfigMap: k8s.poolonly - invalid character '"' after object key:value pair
+2018/08/16 18:14:58 [INFO] No virtual IP was specified for the virtual server ingress__80, creating pool only.
+2018/08/16 18:15:02 [WARNING] Error when creating status IP annotation: Operation cannot be fulfilled on configmaps "k8s.poolonly": the object has been modified; please apply your changes to the latest version and try again
+2018/08/16 18:15:02 [INFO] Wrote 1 Virtual Server and 0 IApp configs
+2018/08/16 18:15:03 [INFO] [2018-08-16 18:15:03,049 f5_cccl.resource.resource INFO] Creating ApiHTTPMonitor: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo_0_http
+2018/08/16 18:15:03 [INFO] [2018-08-16 18:15:03,178 f5_cccl.resource.resource INFO] Creating ApiPool: /ocp/cfgmap_f5demo_k8s.poolonly_f5demo
+2018/08/16 18:15:03 [INFO] [2018-08-16 18:15:03,680 f5_cccl.resource.resource INFO] Creating ApiVirtualServer: /ocp/f5demo_k8s.poolonly
+^C
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# cat hs-bigip01.yaml
+{
+    "apiVersion": "v1",
+    "host": "openshift-f5-bigip01",
+    "hostIP": "10.10.199.98",
+    "kind": "HostSubnet",
+    "metadata": {
+        "name": "openshift-f5-bigip01"
+    },
+    "subnet": "10.131.0.0/23"
+}
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# cat hs-bigip01.yamlls[Kcat hs-bigip01.yaml[Kls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# cd /dev/agi[K[K[K[K[K[Kmo[K[K[K[K/root/demo[K[K[K[K[K[K[K[K[K[K[K[K[Krpm 
+RPM version 4.11.3
+Copyright (C) 1998-2002 - Red Hat, Inc.
+This program may be freely redistributed under the terms of the GNU GPL
+
+Usage: rpm [-aKfgpqVcdLilsiv?] [-a|--all] [-f|--file] [-g|--group] [-p|--package] [--pkgid] [--hdrid] [--triggeredby] [--whatrequires] [--whatprovides]
+        [--nomanifest] [-c|--configfiles] [-d|--docfiles] [-L|--licensefiles] [--dump] [-l|--list] [--queryformat=QUERYFORMAT] [-s|--state] [--nofiledigest]
+        [--nofiles] [--nodeps] [--noscript] [--allfiles] [--allmatches] [--badreloc] [-e|--erase <package>+] [--excludedocs] [--excludepath=<path>]
+        [--force] [-F|--freshen <packagefile>+] [-h|--hash] [--ignorearch] [--ignoreos] [--ignoresize] [-i|--install] [--justdb] [--nodeps] [--nofiledigest]
+        [--nocontexts] [--noorder] [--noscripts] [--notriggers] [--nocollections] [--oldpackage] [--percent] [--prefix=<dir>] [--relocate=<old>=<new>]
+        [--replacefiles] [--replacepkgs] [--test] [-U|--upgrade <packagefile>+] [--reinstall=<packagefile>+] [-D|--define 'MACRO EXPR'] [--undefine=MACRO]
+        [-E|--eval 'EXPR'] [--macros=<FILE:...>] [--noplugins] [--nodigest] [--nosignature] [--rcfile=<FILE:...>] [-r|--root ROOT] [--dbpath=DIRECTORY]
+        [--querytags] [--showrc] [--quiet] [-v|--verbose] [--version] [-?|--help] [--usage] [--scripts] [--setperms] [--setugids] [--conflicts]
+        [--obsoletes] [--provides] [--requires] [--info] [--changelog] [--xml] [--triggers] [--last] [--dupes] [--filesbypkg] [--fileclass] [--filecolor]
+        [--fscontext] [--fileprovide] [--filerequire] [--filecaps]
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# rpm -q [Kf oc 
+error: file /root/f5-agility-labs-containers/openshift/advanced/ocp/oc: No such file or directory
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# rpm -qf oc [1P[1@l
+package oc is not installed
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# rpm -ql oc [1P[1@q[C[1P[1@a
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# rpm -qa oc [K[K[Kopenshift
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# rpm -qa openshift[1P openshift; openshift
+rpm: no arguments given for query
+OpenShift Application Platform 
+
+The OpenShift distribution of Kubernetes helps you build, deploy, and manage your applications on top of Docker
+containers. To start an all-in-one server with the default configuration, run: 
+
+  $ openshift start &
+
+Available Commands:
+  admin       Tools for managing a cluster
+  cli         Command line tools for managing applications
+  completion  Output shell completion code for the specified shell (bash or zsh)
+  ex          Experimental commands under active development
+  help        Help about any command
+  kube        Kubernetes cluster management via kubectl
+  start       Launch all-in-one server
+  version     Display client and server versions
+
+Use "openshift <command> --help" for more information about a given command.
+Use "openshift options" for a list of global command-line options (applies to all commands).
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# rpm -q; openshift[1P openshiftl openshift
+package openshift is not installed
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# ls
+bigip01-cc.yaml  f5-kctlr-openshift-clusterrole.yaml  hs-bigip01.yaml  hs-bigip-float.yaml  [0m[01;32msecret.sh[0m
+bigip02-cc.yaml  gb-f5-vs.yaml                        hs-bigip02.yaml  pool-only.yaml       yelb80iapp.yaml
+]0;root@ose-mstr01:~/agility2018/ocp[root@ose-mstr01 ocp]# c [Kd /root/agility2018/apps/module3
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# cat f5-demo-app-deployment.yaml 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: f5-demo-app
+  namespace: f5demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: f5-demo-app
+    spec:
+      containers:
+      - name: f5-demo-app
+        image: chen23/f5-demo-app:openshift
+        ports:
+         - containerPort: 8080
+           protocol: TCP
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc create -f f5-demo-app-deployment.yaml
+deployment "f5-demo-app" created
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# cat  f5-demo-app-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: f5-demo-app
+  labels:
+    name: f5-demo-app
+  namespace: f5demo
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: f5-demo-app
+
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc create  f5-demo-app-service.yaml-f5-demo-app-service.yaml[Cf5-demo-app-service.yaml f5-demo-app-service.yaml
+service "f5-demo-app" created
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# cat oc create  -f f5-demo-app-service.yaml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat [Kf5-demo-app-configmap.yaml 
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  # name of the resource to create on the BIG-IP
+  name: f5-demo-app
+  # The namespace to create the object in.
+  # The k8s-bigip-ctlr watches all namespaces by default (as of v1.1).
+  # If the k8s-bigip-ctlr is watching a specific namespace(s),
+  # this setting must match the namespace of the Service you want to proxy
+  # -AND- the namespace(s) the k8s-bigip-ctlr watches.
+  namespace: f5demo 
+  labels: 
+    # tells the k8s-bigip-ctlr to watch this ConfigMap
+    f5type: virtual-server
+data:
+  # NOTE: schema v0.1.4 is required as of k8s-bigip-ctlr v1.3.0
+  schema: "f5schemadb://bigip-virtual-server_v0.1.7.json"
+  data: |
+    {
+      "virtualServer": {
+        "backend": {
+          "servicePort": 8080,
+          "serviceName": "f5-demo-app",
+          "healthMonitors": [{
+            "interval": 30,
+            "protocol": "http",
+            "send": "GET /\r\n",
+            "timeout": 120
+          }]
+        },
+        "frontend": {
+          "virtualAddress": {
+            "port": 80,
+            "bindAddr": "10.10.201.130"
+          },
+          "partition": "ocp",
+          "balance": "least-connections-node",
+          "mode": "http"
+        }
+      }
+    }
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc create -f f5-demo-app-configmap.yaml
+configmap "f5-demo-app" created
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc get deployment -n f5dem
+No resources found.
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc get deployment -n f5demo
+NAME          DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+f5-demo-app   1         1         1            1           2m
+f5demo        15        15        15           15          53m
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc 
+OpenShift Client 
+
+This client helps you develop, build, deploy, and run your applications on any OpenShift or Kubernetes compatible
+platform. It also includes the administrative commands for managing a cluster under the 'adm' subcommand.
+
+To create a new application, login to your server and then run new-app: 
+
+  oc login https://mycluster.mycompany.com
+  oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git
+  oc logs -f bc/ruby-ex
+  
+This will create an application based on the Docker image 'centos/ruby-22-centos7' that builds the source code from
+GitHub. A build will start automatically, push the resulting image to the registry, and a deployment will roll that
+change out in your project. 
+
+Once your application is deployed, use the status, describe, and get commands to see more about the created components: 
+
+  oc status
+  oc describe deploymentconfig ruby-ex
+  oc get pods
+  
+To make this application visible outside of the cluster, use the expose command on the service we just created to create
+a 'route' (which will connect your application over the HTTP port to a public domain name). 
+
+  oc expose svc/ruby-ex
+  oc status
+  
+You should now see the URL the application can be reached at. 
+
+To see the full list of commands supported, run 'oc --help'.
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc status 
+E0816 11:51:54.524252   14697 service_group.go:75] unrecognized container: Deployment|f5demo/f5-demo-app
+E0816 11:51:54.524582   14697 service_group.go:75] unrecognized container: Deployment|f5demo/f5demo
+In project f5demo on server https://ose-mstr01.f5.local:8443
+
+svc/f5-demo-app - 172.30.253.114:8080
+  pod/f5-demo-app-2320220605-knk99 runs chen23/f5-demo-app:openshift
+
+svc/f5demo - 172.30.186.191:8080
+  pod/f5demo-2982126671-d8xbv runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-kqnfs runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-nszlj runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-wmvwp runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-zbqzf runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-4rsr7 runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-w6dj6 runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-d2fgt runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-mptd5 runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-mbfs6 runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-2c9vp runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-llx27 runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-49zvq runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-f4ccf runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-t44cw runs kmunson1973/f5demo:1.0.0
+
+View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc scale --replicas=10 deployment/f5-demo-app -n f5demo
+deployment "f5-demo-app" scaled
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# 
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# 
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc scale --replicas=10 deployment/f5-demo-app -n f5demo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctatus [K
+E0816 11:52:13.558196   14721 service_group.go:75] unrecognized container: Deployment|f5demo/f5demo
+E0816 11:52:13.558344   14721 service_group.go:75] unrecognized container: Deployment|f5demo/f5-demo-app
+In project f5demo on server https://ose-mstr01.f5.local:8443
+
+svc/f5-demo-app - 172.30.253.114:8080
+  pod/f5-demo-app-2320220605-9jngz runs chen23/f5-demo-app:openshift
+  pod/f5-demo-app-2320220605-knk99 runs chen23/f5-demo-app:openshift
+  pod/f5-demo-app-2320220605-d55h2 runs chen23/f5-demo-app:openshift
+  pod/f5-demo-app-2320220605-8fggf runs chen23/f5-demo-app:openshift
+  pod/f5-demo-app-2320220605-bzhhc runs chen23/f5-demo-app:openshift
+  pod/f5-demo-app-2320220605-f5zk9 runs chen23/f5-demo-app:openshift
+  pod/f5-demo-app-2320220605-q97br runs chen23/f5-demo-app:openshift
+  pod/f5-demo-app-2320220605-pss4x runs chen23/f5-demo-app:openshift
+  pod/f5-demo-app-2320220605-6zpkk runs chen23/f5-demo-app:openshift
+  pod/f5-demo-app-2320220605-ckz5g runs chen23/f5-demo-app:openshift
+
+svc/f5demo - 172.30.186.191:8080
+  pod/f5demo-2982126671-49zvq runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-mbfs6 runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-d2fgt runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-kqnfs runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-w6dj6 runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-llx27 runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-t44cw runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-2c9vp runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-nszlj runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-wmvwp runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-mptd5 runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-f4ccf runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-4rsr7 runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-d8xbv runs kmunson1973/f5demo:1.0.0
+  pod/f5demo-2982126671-zbqzf runs kmunson1973/f5demo:1.0.0
+
+View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc delete -f f5-demo-app-configmap.yaml
+configmap "f5-demo-app" deleted
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc delete -f f5-demo-app-deployment.yaml
+deployment "f5-demo-app" deleted
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc delete -f f5-demo-app-service.yaml
+service "f5-demo-app" deleted
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# cat f5-demo-app-route-deployment.yaml 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: f5-demo-app-route
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: f5-demo-app-route
+    spec:
+      containers:
+      - name: f5-demo-app-route
+        image: chen23/f5-demo-app:openshift
+        ports:
+         - containerPort: 8080
+           protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: f5-demo-app-route
+  labels:
+    name: f5-demo-app-route
+  namespace: f5demo
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app: f5-demo-app-route
+
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc create -f f5-demo-app-route-deployment.yaml -n f5demo
+deployment "f5-demo-app-route" created
+service "f5-demo-app-route" created
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# cat f5-demo-app-route-route.yaml
+apiVersion: v1
+kind: Route
+metadata:
+  labels:
+    name: f5-demo-app-route
+  name: f5-demo-app-route
+  namespace: f5demo
+  annotations:
+    # Specify a supported BIG-IP load balancing mode
+    virtual-server.f5.com/balance: least-connections-node
+    virtual-server.f5.com/health: |
+      [
+        {
+          "path": "mysite.f5demo.com/",
+          "send": "HTTP GET /",
+          "interval": 5,
+          "timeout": 10
+        }
+      ]
+spec:
+  host: mysite.f5demo.com
+  path: "/"
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: f5-demo-app-route
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]#  oc create -f f5-demo-app-route-route.yaml -n f5demo
+route "f5-demo-app-route" created
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc delete -f f5-demo-app-route-route.yaml -n f5demo
+route "f5-demo-app-route" deleted
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc delete -f f5-demo-app-route-deployment.yaml -n f5demo
+deployment "f5-demo-app-route" deleted
+service "f5-demo-app-route" deleted
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc create -f f5-demo-app-bg-deployment.yaml -n f5demo
+deployment "node-blue" created
+service "node-blue" created
+deployment "node-green" created
+service "node-green" created
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# cat f5-demo-app-bg-deployment.yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: node-blue
+  namespace: f5demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: node-blue
+    spec:
+      containers:
+      - image: "chen23/f5-demo-app"
+        env:
+        - name: F5DEMO_APP
+          value: "website"
+        - name: F5DEMO_NODENAME
+          value: "Node Blue (No SSL)"
+        - name: F5DEMO_NODENAME_SSL
+          value: "Node Blue (SSL)"
+        - name: F5DEMO_COLOR
+          value: "0000FF"
+        - name: F5DEMO_COLOR_SSL
+          value: "0000FF"
+        imagePullPolicy: IfNotPresent
+        name: node-blue
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+          protocol: TCP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-blue
+  labels:
+    run: node-blue
+  namespace: f5demo
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+    name: http
+  - port: 443
+    protocol: TCP
+    targetPort: 443
+    name: https
+  type: ClusterIP
+  selector:
+    run: node-blue
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: node-green
+  namespace: f5demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: node-green
+    spec:
+      containers:
+      - image: "chen23/f5-demo-app"
+        env:
+        - name: F5DEMO_APP
+          value: "website"
+        - name: F5DEMO_NODENAME
+          value: "Node Green (No SSL)"
+        - name: F5DEMO_COLOR
+          value: "99FF99"
+        - name: F5DEMO_NODENAME_SSL
+          value: "Node Green (SSL)"
+        - name: F5DEMO_COLOR_SSL
+          value: "00FF00"
+        imagePullPolicy: IfNotPresent
+        name: node-green
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+          protocol: TCP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-green
+  labels:
+    run: node-green
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+    name: http
+  type: ClusterIP
+  selector:
+    run: node-green
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc create -f f5-demo-app-bg-route.yaml
+route "f5-demo-app-bg-route" created
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# cat f5-demo-app-bg-route.yaml
+apiVersion: v1
+kind: Route
+metadata:
+  labels:
+    name: f5-demo-app-bg-route
+  name: f5-demo-app-bg-route
+  namespace: f5demo
+  annotations:
+    # Specify a supported BIG-IP load balancing mode
+    virtual-server.f5.com/balance: least-connections-node
+    virtual-server.f5.com/health: |
+      [
+        {
+          "path": "mysite-bg.f5demo.com/",
+          "send": "HTTP GET /",
+          "interval": 5,
+          "timeout": 10
+        }
+      ]
+spec:
+  host: mysite-bg.f5demo.com
+  port:
+    targetPort: 80
+  to:
+    kind: Service
+    name: node-blue
+    weight: 20
+  alternateBackends:
+  - kind: Service
+    name: node-green
+    weight: 10
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc get route -n f5demo
+NAME                   HOST/PORT              PATH      SERVICES                         PORT      TERMINATION   WILDCARD
+f5-demo-app-bg-route   mysite-bg.f5demo.com             node-blue(66%),node-green(33%)   80                      None
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc get route -n f5democat f5-demo-app-bg-route.yaml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9@oc create -f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cfor i in {1..1000}; do curl -s -o /dev/null http://mysite-bg.f5demo.com; done
+-bash: syntax error near unexpected token `do'
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc create -f f5-demo-app-bg-route.yamlfor i in {1..1000}; do curl -s -o /dev/null http://mysite-bg.f5demo.com; done[C[1@i[1@ 
+-bash: syntax error near unexpected token `do'
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc create -f f5-demo-app-bg-route.yamli for i in {1..1000}; do curl -s -o /dev/null http://mysite-bg.f5demo.com; done[C[1P
+-bash: syntax error near unexpected token `do'
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc create -f f5-demo-app-bg-route.yaml for i in {1..1000}; do curl -s -o /dev/null http://mysite-bg.f5demo.com; done
+-bash: syntax error near unexpected token `do'
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# oc create -f f5-demo-app-bg-route.yaml for i in {1..1000}; do curl -s -o /dev/null http://mysite-bg.f5demo.com; done
+-bash: syntax error near unexpected token `do'
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# for i in {1..1000}; do curl -s -o /dev/null http://mysite-bg.f5demo.com; done
+^C
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# ls
+f5-demo-app-bg-deployment.yaml    f5-demo-app-configmap.yaml         f5-demo-app-iapp-configmap.yaml    f5-demo-app-route-route.yaml
+f5-demo-app-bg-route.yaml         f5-demo-app-deployment.yaml        f5-demo-app-ingress.yaml           f5-demo-app-service.yaml
+f5-demo-app-blue-deployment.yaml  f5-demo-app-green-deployment.yaml  f5-demo-app-route-deployment.yaml
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# lsfor i in {1..1000}; do curl -s -o /dev/null http://mysite-bg.f5demo.com; done[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[39@oc create -f f5-demo-app-bg-route.yaml [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@i[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2@i [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@i[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cget route -n f5demo[K
+NAME                   HOST/PORT              PATH      SERVICES                         PORT      TERMINATION   WILDCARD
+f5-demo-app-bg-route   mysite-bg.f5demo.com             node-blue(66%),node-green(33%)   80                      None
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# for i in {1..1000}; do curl -s -o /dev/null http://mysite-bg.f5demo.com; done
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# 
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# 
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# 
+]0;root@ose-mstr01:~/agility2018/apps/module3[root@ose-mstr01 module3]# 
